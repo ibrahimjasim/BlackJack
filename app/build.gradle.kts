@@ -7,7 +7,13 @@ android {
     namespace = "com.example.blcakjack"
     compileSdk {
         version = release(36)
+
+        //Turn on ViewBinding
+        buildFeatures {
+            viewBinding = true
+        }
     }
+
 
     defaultConfig {
         applicationId = "com.example.blcakjack"
@@ -26,6 +32,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
         }
     }
     compileOptions {
