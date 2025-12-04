@@ -1,7 +1,10 @@
 package com.example.blcakjack.model
 
 /**
- * Represents a standard 52-card deck.
+ * Represents a 52-card deck.
+ * - Creates 52 cards
+ * - Shuffles them
+ * - Allows drawing cards
  */
 class Deck {
 
@@ -11,18 +14,20 @@ class Deck {
         reset()
     }
 
-    /** Clears and recreates the full deck, then shuffles it. */
+    /** Rebuilds the deck and shuffles it. */
     fun reset() {
         cards.clear()
+
         for (suit in Suit.values()) {
             for (rank in Rank.values()) {
-                cards.add(Card(rank, suit))
+                cards.add(Card())
             }
         }
+
         cards.shuffle()
     }
 
-    /** Draws (removes + returns) the top card. */
+    /** Draws and removes the top card. If empty, rebuilds deck. */
     fun draw(): Card {
         if (cards.isEmpty()) reset()
         return cards.removeAt(0)
