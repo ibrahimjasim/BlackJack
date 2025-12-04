@@ -15,5 +15,6 @@
     <color name="card_bg">#FDF5EC</color>
     <color name="card_border">#E0D4C4</color>
     <color name="text_main">#F8F8F8</color>
+    <color name="bg_green_dark2">#06281B</color>
 </resources>
 
