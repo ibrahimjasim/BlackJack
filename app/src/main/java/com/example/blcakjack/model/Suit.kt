@@ -1,4 +1,8 @@
 package com.example.blcakjack.model
 
-class Suit {
+enum class Suit {
+    CLUBS,
+    DIAMONDS,
+    HEARTS,
+    SPADES
 }
